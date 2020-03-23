@@ -1,7 +1,7 @@
 ### 洋葱圈模型的实现
 [上篇](./application.md)讲到洋葱圈模型，感觉这里还是要展开讲一下，有一个官方的洋葱圈模型gif图很形象
 
-[middleware](https://raw.githubusercontent.com/koajs/koa/a7b6ed0529a58112bac4171e4729b8760a34ab8b/docs/middleware.gif)
+![middleware](https://raw.githubusercontent.com/koajs/koa/a7b6ed0529a58112bac4171e4729b8760a34ab8b/docs/middleware.gif)
 
 上篇中有解释，其实中间件注册就是通过 use 函数 push一个到 ```app.middleWare``` 数组里面，在request的时候先获得执行，下面结合gif中的例子来讲一下
 下面介绍一下实现精巧的 compose
