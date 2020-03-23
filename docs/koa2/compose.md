@@ -21,7 +21,7 @@
       if (i === middleware.length) fn = next
       if (!fn) return Promise.resolve()
       try {
-        // 绑起来执行
+        // 核心，串起来
         return Promise.resolve(fn(context, dispatch.bind(null, i + 1)));
       } catch (err) {
         return Promise.reject(err)
@@ -38,7 +38,9 @@ this.middleWare = [responseTime, logger, contentLength, body]
 
 * step2: application.callback 调用 compose 解开函数，形成递归, 形成的伪代码如下
 
-responseTime(ctx).then(logger(ctx).then(contentLength(ctx).then(body(ctx))))
+```javascript 1.8
+ responseTime(ctx).then(logger(ctx).then(contentLength(ctx).then(body(ctx)))) 
+```
 
 对的，很像俄罗斯套娃，写成这样，会不会好理解一点？
 因为 Generator 的特性，每次碰到 yield 就醒后执行到里面，形成了实例里面的套娃洋葱圈效果
