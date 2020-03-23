@@ -22,4 +22,32 @@ koa2 是 koa 的进化版本，和koa的差异是是使用es6的 async / await �
 
 [洋葱圈模型](https://eggjs.org/zh-cn/intro/egg-and-koa.html#middleware)
 
+### 看源码的方法
+之前听过一位社区大牛的课程，介绍了一些看源码的方法，深以为然，本系列也用这种方式来看源码。
+其实本质是一种调试的方法，然后根据调用栈摸清楚代码的来龙去脉
 
+以对koa的代码研究为例，列举步骤如下：
+step0：准备nodejs环境（>8）,chrome(>67,最好是最新版本的)
+
+step1：clone koa 源码，在根目录下新建一个 ```x.js``` 文件
+
+step2：把需要运行的例子copy到x.js中，比如
+```javascript 1.8
+const Koa = require('./lib/application');
+const app = new Koa();
+
+app.use(async ctx => {
+  ctx.body = 'Hello World';
+});
+
+app.listen(8000);
+```
+
+step3：运行调试 ```node --inspect-brk x.js```,如果输出如下，说明成功启动
+![inpesct-success](/assets/koa-index-1.png)
+
+step4: chrome地址栏输入：```chrome://inspect/``` 打开 Romate Target 下的 inspect，就可以进行调试了
+
+step5：用step forward 一步一步开始愉快的debug~~
+
+[next:开始](./application.md)
