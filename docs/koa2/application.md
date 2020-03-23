@@ -1,7 +1,7 @@
 ## koa application 分析
 接上节,我们借助最简单的建立服务器来看一下 koa/lib/application 里面的实现,作为web应用核心的启动模块，我们按照使用场景进行分析
 
-### part1，new Koa && listen
+### new Koa() && listen
 ```javascript 1.8
 const Koa = require('./lib/application');
 // debugger here
