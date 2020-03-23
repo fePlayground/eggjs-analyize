@@ -25,7 +25,7 @@ app.listen(8000);
 ```
 参考资料：[http.createServer](http://nodejs.cn/api/http.html#http_http_createserver_options_requestlistener)
 
-### this.callback 和 this.handleRequire
+### callback 和 handleRequire
 刚才说到，在我们使用 Koa.listen 启动一个web服务器的时候，```application.listen``` 调用了```this.callback```,
 接下来，我们看看 this.callback 干了什么
 * 这里会涉及到 ```koa-compose、on-finished```这些包

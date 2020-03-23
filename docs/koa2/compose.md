@@ -30,7 +30,7 @@
   }
 ```
 
-### gif解析
+### 示例解析
 * step1：按顺序注到```this.middleWare里面```
 ```javascript 1.8 
 this.middleWare = [responseTime, logger, contentLength, body]
