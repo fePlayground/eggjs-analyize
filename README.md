@@ -29,9 +29,9 @@ so，在阅读之前，你最好具备如下知识：
 - [概述](./docs/koa2/index.md)
 - [application](./docs/koa2/application.md)
 - [洋葱圈: compose](./docs/koa2/compose.md)
-- context
-- require
-- response
+- [上下文: context](./docs/koa2/context.md)
+- [请求封装: request](./docs/koa2/request.md)
+- [请求封装: response](./docs/koa2/response.md)
 
 ### egg-core 解析
 - Loader
