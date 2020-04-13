@@ -30,10 +30,10 @@ so，在阅读之前，你最好具备如下知识：
 - [application](./docs/koa2/application.md)
 - [洋葱圈: compose](./docs/koa2/compose.md)
 - [上下文: context](./docs/koa2/context.md)
-- [请求封装: request](./docs/koa2/request.md)
-- [请求封装: response](./docs/koa2/response.md)
+- [请求封装: request & response](./docs/koa2/requestAndResponse.md)
 
 ### egg-core 解析
+- [概览](./docs/egg-core/index.md)
 - Loader
 - Middleware
 - Plugin
